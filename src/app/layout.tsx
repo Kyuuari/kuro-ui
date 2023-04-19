@@ -1,6 +1,7 @@
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { bebas, playfair, spectral } from "@/lib/fonts";
+import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata = {
   title: "Create Next App",
@@ -16,8 +17,14 @@ export default function RootLayout({
     <html
       lang="en"
       className={cn(bebas.variable, spectral.variable, playfair.variable)}
+      suppressHydrationWarning
     >
-      <body>{children}</body>
+      <head />
+      <body>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

@@ -37,7 +37,8 @@
   }
 
   .dark {
-    --background: 224 71% 4%;
+    /* --background: 224 71% 4%; */
+    --background: 43, 14%, 5%, 1;
     --foreground: 213 31% 91%;
 
     --muted: 223 47% 11%;
@@ -49,8 +50,10 @@
     --card: 0 0% 100%;
     --card-foreground: 222.2 47.4% 11.2%;
 
-    --border: 216 34% 17%;
-    --input: 216 34% 17%;
+    --border: 215, 12%, 21%, 1;
+    --input: 215, 12%, 21%, 1;
+    /* --border: 216 34% 17%;
+    --input: 216 34% 17%; */
 
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 1.2%;
@@ -77,5 +80,19 @@
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .kuro-h1 {
+    @apply font-display scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
+  }
+
+  .kuro-sub {
+    @apply font-sub scroll-m-20 text-2xl font-semibold tracking-tight;
+  }
+
+  .kuro-p {
+    @apply font-body leading-7 [&:not(:first-child)]:mt-6;
   }
 }
