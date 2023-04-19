@@ -1,13 +1,5 @@
 "use client";
 import { cn } from "@/lib/utils";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@radix-ui/react-navigation-menu";
 import Link from "next/link";
 import React from "react";
 import { Icons } from "./icons";
@@ -32,24 +24,14 @@ export default function MainNav({}: Props) {
           Home
         </Link> */}
         <Link
-          href="/"
-          className={cn(
-            "transition-colors hover:text-foreground/80"
-            // pathname?.startsWith("/docs/components")
-            //   ? "text-foreground"
-            //   : "text-foreground/60"
-          )}
+          href="/about"
+          className={cn("transition-colors hover:text-foreground/80")}
         >
           About
         </Link>
         <Link
           href="/typography"
-          className={cn(
-            "transition-colors hover:text-foreground/80"
-            // pathname?.startsWith("/examples")
-            //   ? "text-foreground"
-            //   : "text-foreground/60"
-          )}
+          className={cn("transition-colors hover:text-foreground/80")}
         >
           Typography
         </Link>

@@ -5,8 +5,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { spectral } from "@/lib/fonts";
-import { cn } from "@/lib/utils";
 
 export function AccordionDemo() {
   return (
