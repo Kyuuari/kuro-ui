@@ -1,9 +1,15 @@
+"use client";
 import React from "react";
 import MainNav from "./main-nav";
 import Link from "next/link";
 import { Icons } from "./icons";
 import { buttonVariants } from "./ui/button";
 import { cn } from "@/lib/utils";
+import dynamic from "next/dynamic";
+
+const ThemeToggleNoSSR = dynamic(() => import("@/components/theme-toggle"), {
+  ssr: false,
+});
 
 type Props = {};
 
@@ -13,9 +19,9 @@ export default function SiteHeader({}: Props) {
       <div className="container flex h-14 items-center">
         <MainNav />
         {/* <MobileNav /> */}
-        {/* <div className="flex flex-1 items-center justify-between space-x-2 sm:space-x-4 md:justify-end ">
+        <div className="flex flex-1 items-center space-x-2 sm:space-x-4 justify-end ">
           <nav className="flex items-center space-x-1">
-            <Link
+            {/* <Link
               href={"https://github.com/shadcn/ui"}
               target="_blank"
               rel="noreferrer"
@@ -32,8 +38,8 @@ export default function SiteHeader({}: Props) {
                 <Icons.gitHub className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
               </div>
-            </Link>
-            <Link
+            </Link> */}
+            {/* <Link
               href={siteConfig.links.twitter}
               target="_blank"
               rel="noreferrer"
@@ -50,10 +56,10 @@ export default function SiteHeader({}: Props) {
                 <Icons.twitter className="h-5 w-5 fill-current" />
                 <span className="sr-only">Twitter</span>
               </div>
-            </Link>
-            <ModeToggle />
+            </Link> */}
+            <ThemeToggleNoSSR />
           </nav>
-        </div> */}
+        </div>
       </div>
     </header>
   );

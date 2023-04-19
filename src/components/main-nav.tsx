@@ -21,8 +21,8 @@ export default function MainNav({}: Props) {
         <Icons.logo className="h-6 w-6" />
         <span className="hidden font-bold sm:inline-block">{"Kyuuari"}</span>
       </Link>
-      <nav className="flex items-center space-x-6 text-sm font-medium font-sub">
-        <Link
+      <nav className="flex items-center space-x-6 text-sm font-medium font-sub italic">
+        {/* <Link
           href="/"
           className={cn(
             "transition-colors hover:text-foreground/80"
@@ -30,7 +30,7 @@ export default function MainNav({}: Props) {
           )}
         >
           Home
-        </Link>
+        </Link> */}
         <Link
           href="/"
           className={cn(
@@ -43,7 +43,7 @@ export default function MainNav({}: Props) {
           About
         </Link>
         <Link
-          href="/"
+          href="/typography"
           className={cn(
             "transition-colors hover:text-foreground/80"
             // pathname?.startsWith("/examples")
@@ -51,7 +51,7 @@ export default function MainNav({}: Props) {
             //   : "text-foreground/60"
           )}
         >
-          Sketches
+          Typography
         </Link>
         <Link
           href={"https://github.com/Kyuuari"}
@@ -60,14 +60,6 @@ export default function MainNav({}: Props) {
           )}
         >
           GitHub
-        </Link>
-        <Link
-          href={"/typography"}
-          className={cn(
-            "hidden text-foreground/60 transition-colors hover:text-foreground/80 lg:block"
-          )}
-        >
-          Typography
         </Link>
       </nav>
     </div>

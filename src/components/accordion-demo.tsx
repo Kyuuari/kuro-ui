@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 
 export function AccordionDemo() {
   return (
-    <Accordion type="single" collapsible className="w-full">
+    <Accordion type="single" collapsible className="w-full italic">
       <AccordionItem value="item-1">
         <AccordionTrigger>Is it accessible?</AccordionTrigger>
         <AccordionContent>

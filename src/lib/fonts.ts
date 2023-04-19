@@ -1,4 +1,4 @@
-import { Bebas_Neue, Playfair_Display, Spectral_SC, Varela } from "next/font/google";
+import { Bebas_Neue, Chivo, Chivo_Mono, Inconsolata, Playfair_Display, Spectral_SC } from "next/font/google";
 
 
 export const bebas = Bebas_Neue({
@@ -9,7 +9,7 @@ export const bebas = Bebas_Neue({
 
 export const spectral = Spectral_SC({
   subsets: ["latin"],
-  weight: ["400"],
+  weight: ["400", "600"],
   style: ["italic"],
   variable: "--font-sub",
 });
@@ -19,4 +19,11 @@ export const playfair = Playfair_Display({
   weight: ["400"],
   style: ["normal"],
   variable: "--font-body",
+});
+
+export const chivo = Inconsolata({
+  subsets: ["latin"],
+  weight: ["400"],
+  style: ["normal"],
+  variable: "--font-accent",
 });

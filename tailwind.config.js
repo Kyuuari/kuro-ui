@@ -62,6 +62,7 @@ module.exports = {
         display: ["var(--font-display)", `"Bebas Neue"`, ...fontFamily.sans],
         sub: ["var(--font-sub)", "Spectral SC", ...fontFamily.sans],
         body: ["var(--font-body)", `"Playfair Display"`, ...fontFamily.sans],
+        accent: ["var(--font-accent)", `"Chivo Mono"`, ...fontFamily.sans],
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
       keyframes: {
