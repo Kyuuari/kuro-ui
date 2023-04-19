@@ -2,6 +2,8 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { bebas, playfair, spectral } from "@/lib/fonts";
 import { ThemeProvider } from "@/components/theme-provider";
+import MainNav from "@/components/main-nav";
+import SiteHeader from "@/components/site-header";
 
 export const metadata = {
   title: "Create Next App",
@@ -22,6 +24,7 @@ export default function RootLayout({
       <head />
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <SiteHeader />
           {children}
         </ThemeProvider>
       </body>
